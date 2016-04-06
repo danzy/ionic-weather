@@ -177,7 +177,7 @@ angular.module('ionic.weather.services', ['ngResource'])
               }
             }
             console.log('Reverse', parts);
-            q.resolve(parts.join(', '));
+	    q.resolve((parts.length > 0 ? parts[0] : ''));
           }
         } else {
           console.log('reverse fail', results, status);

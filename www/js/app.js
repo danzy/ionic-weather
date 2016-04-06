@@ -74,7 +74,7 @@ angular.module('ionic.weather', ['ionic', 'ionic.weather.services', 'ionic.weath
       if($scope.bgImages) {
         $scope.activeBgImage = $scope.bgImages[$scope.activeBgImageIndex++ % $scope.bgImages.length];
       }
-      //$timeout(cycle, 10000);
+      $timeout(cycle, 10000);
     });
   };
 
