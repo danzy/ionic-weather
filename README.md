@@ -1,7 +1,7 @@
 Ionic Weather App
 ==========================
 
-A simple Ionic-based Weather app, inspired by Yahoo! Weather.
+A simple Ionic-based Weather app, inspired by [forecast.io](http://forecast.io).
 
 To build, install cordova, then run:
 
