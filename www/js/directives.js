@@ -148,11 +148,13 @@ angular.module('ionic.weather.directives', [])
   return {
     restrict: 'A',
     link: function($scope, $element, $attr) {
-      var amt, st, header;
-      var bg = document.querySelector('.bg-image');
+      var amt, st, header, bg;
       $element.bind('scroll', function(e) {
         if(!header) {
           header = document.getElementById('header');
+        }
+        if(!bg){
+          bg = document.querySelector(".bg-image");
         }
         st = e.detail.scrollTop;
         if(st >= 0) {
@@ -163,7 +165,7 @@ angular.module('ionic.weather.directives', [])
         amt = Math.min(0.6, st / 1000);
 
         ionic.requestAnimationFrame(function() {
-          header.style.opacty = 1 - amt;
+          header.style.opacity = 1 - amt;
           if(bg) {
             bg.style.opacity = 1 - amt;
           }
